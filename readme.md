@@ -24,6 +24,7 @@ clinfo|./clinfo-parse.py
 or
 
 clinfo > clinfo.txt
+
 ./clinfo-parse.py clinfo.txt
 
 
