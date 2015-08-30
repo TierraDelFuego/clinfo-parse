@@ -18,14 +18,13 @@ havegpu = 0
 
 def linecheck(line):
     global havegpu
-    if 'Board name:' in line:
-        print line.strip()
     if havegpu:
+        if 'Board name:' in line:
+            print line.strip()
         if 'Global memory size:' in line:
             print line.strip()
             exit(1)
     if 'CL_DEVICE_TYPE_GPU' in line:
-        print line.strip()
         havegpu = 1
 
 
